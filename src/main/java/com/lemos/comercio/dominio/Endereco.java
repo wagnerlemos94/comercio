@@ -2,6 +2,7 @@ package com.lemos.comercio.dominio;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -44,7 +45,7 @@ public class Endereco implements Serializable{
 	private String cep;
 	
 	@NotNull
-	@OneToOne(fetch = FetchType.EAGER)
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Cidade cidade;
 	
 

@@ -2,6 +2,7 @@ package com.lemos.comercio.dominio;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -32,7 +33,7 @@ public class Cidade implements Serializable{
 	private String nome;
 	
 	@NotNull
-	@OneToOne(fetch = FetchType.EAGER)
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Estado estado;
 
 }
