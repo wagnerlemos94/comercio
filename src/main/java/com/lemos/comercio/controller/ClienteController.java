@@ -46,4 +46,12 @@ public class ClienteController {
 		return ResponseEntity.ok().build();
 	}
 	
+	@RequestMapping(value = "/cliente/{id}", method = RequestMethod.PUT)
+	public ResponseEntity<Void> update(@PathVariable Integer id,@RequestBody Cliente cliente){
+		cliente.setId(id);
+		clienteService.insert(cliente);
+		return ResponseEntity.ok().build();
+		
+	}
+	
 }

@@ -16,7 +16,6 @@ public class ClienteService {
 	private ClienteDao clienteDao;
 	
 	public void insert(Cliente cliente) {
-		//enderecoService.inert(cliente.getEndereco());
 		clienteDao.save(cliente);
 	}
 	
