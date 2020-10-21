@@ -23,7 +23,7 @@ public class ClienteController {
 	
 	@RequestMapping(value = "/cliente", method = RequestMethod.POST)
 	public ResponseEntity<Void> save(@RequestBody Cliente cliente) {
-		clienteService.insert(cliente);
+		clienteService.save(cliente);
 		return ResponseEntity.ok().build();
 	}
 	
@@ -49,7 +49,7 @@ public class ClienteController {
 	@RequestMapping(value = "/cliente/{id}", method = RequestMethod.PUT)
 	public ResponseEntity<Void> update(@PathVariable Integer id,@RequestBody Cliente cliente){
 		cliente.setId(id);
-		clienteService.insert(cliente);
+		clienteService.save(cliente);
 		return ResponseEntity.ok().build();
 		
 	}

@@ -15,7 +15,7 @@ public class ClienteService {
 	@Autowired
 	private ClienteDao clienteDao;
 	
-	public void insert(Cliente cliente) {
+	public void save(Cliente cliente) {
 		clienteDao.save(cliente);
 	}
 	

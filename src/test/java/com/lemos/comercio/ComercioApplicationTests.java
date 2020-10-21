@@ -1,4 +1,4 @@
-package com.lemos.consultorio;
+package com.lemos.comercio;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
